@@ -1591,7 +1591,7 @@
                       <path d="M30,160 A130,130 0 0 1 108,42" fill="none" stroke="rgba(13,138,106,0.85)" stroke-width="22" stroke-linecap="round"></path>
                       <path d="M108,42 A130,130 0 0 1 212,42" fill="none" stroke="rgba(196,123,20,0.9)" stroke-width="22" stroke-linecap="round"></path>
                       <path d="M212,42 A130,130 0 0 1 290,160" fill="none" stroke="rgba(192,57,43,0.9)" stroke-width="22" stroke-linecap="round"></path>
-                      <g id="gaugeNeedle" transform="rotate(-180 160 160)">
+                      <g id="gaugeNeedle" transform="rotate(-90 160 160)">
                         <line x1="160" y1="160" x2="160" y2="44" stroke="#0f2d52" stroke-width="4" stroke-linecap="round"></line>
                         <circle cx="160" cy="160" r="8.5" fill="#0f2d52"></circle>
                       </g>
@@ -2198,7 +2198,7 @@
 
     function updateGauge(latestRow) {
       const score = toNumber(latestRow.mss) ?? 0;
-      const angle = -180 + (Math.max(0, Math.min(100, score)) / 100) * 180;
+      const angle = -90 + (Math.max(0, Math.min(100, score)) / 100) * 180;
       document.getElementById("gaugeNeedle").setAttribute("transform", `rotate(${angle} 160 160)`);
       document.getElementById("gaugeScore").textContent = score.toFixed(1);
       document.getElementById("gaugeQuarter").textContent = `Latest quarter: ${formatQuarter(latestRow.quarter)}`;
