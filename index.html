@@ -1785,7 +1785,38 @@
       muted: "#667085",
       grid: "#e8eef8"
     };
-
+     const FIRM_DOMAINS = {
+  "33769":  "bhel.com",
+  "34162":  "airtel.com",
+  "47858":  "cipla.com",
+  "48799":  "coalindia.in",
+  "62987":  "drreddys.com",
+  "79498":  "gailonline.com",
+  "88297":  "hdfc.com",
+  "92590":  "heromotocorp.com",
+  "93902":  "hindalco.com",
+  "94080":  "hul.co.in",
+  "95632":  "hdfcbank.com",
+  "96379":  "icicibank.com",
+  "97066":  "itcportal.com",
+  "100632": "infosys.com",
+  "127106": "larsentoubro.com",
+  "136444": "mahindra.com",
+  "140829": "marutisuzuki.com",
+  "155695": "ntpc.co.in",
+  "163226": "ongcindia.com",
+  "164646": "tcs.com",
+  "196667": "ril.com",
+  "216946": "sesamining.com",
+  "236328": "sbi.co.in",
+  "239726": "sunpharma.com",
+  "248093": "tatamotors.com",
+  "248136": "tatasteel.com",
+  "248165": "tatapower.com",
+  "256066": "axisbank.com",
+  "272724": "wipro.com",
+  "374518": "bajajauto.com"
+};
     const INTERPRETABLE_FEATURES = [
       "CPR",
       "ICSI",
@@ -2114,14 +2145,6 @@
           </td>
         </tr>
       `;
-         const FIRM_DOMAINS = {
-  // co_code : "companydomain.com"
-  // Populate these with your actual co_codes from the JSON
-  "1001": "tcs.com",
-  "1002": "infosys.com",
-  "1003": "wipro.com",
-  // ... add all your firms here
-};
       const btn = document.getElementById("resetFiltersBtn");
       if (btn) {
         btn.addEventListener("click", () => {
