@@ -860,6 +860,12 @@
       font-style: italic;
       flex: 0 0 auto;
     }
+.identity-avatar img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  border-radius: 4px;
+}
 
     .gauge-wrap {
       display: flex;
@@ -2108,6 +2114,14 @@
           </td>
         </tr>
       `;
+         const FIRM_DOMAINS = {
+  // co_code : "companydomain.com"
+  // Populate these with your actual co_codes from the JSON
+  "1001": "tcs.com",
+  "1002": "infosys.com",
+  "1003": "wipro.com",
+  // ... add all your firms here
+};
       const btn = document.getElementById("resetFiltersBtn");
       if (btn) {
         btn.addEventListener("click", () => {
@@ -2238,7 +2252,18 @@
       document.getElementById("identityName").textContent = name;
       document.getElementById("identitySector").textContent = sector;
       document.getElementById("identityCode").textContent = `co_code: ${code}`;
-      document.getElementById("identityAvatar").textContent = name[0] || "?";
+      const avatarEl = document.getElementById("identityAvatar");
+const domain = FIRM_DOMAINS[String(code)] || null;
+if (domain) {
+  const img = document.createElement("img");
+  img.src = `https://logo.clearbit.com/${domain}`;
+  img.alt = name;
+  img.onerror = () => { avatarEl.innerHTML = ""; avatarEl.textContent = name[0] || "?"; };
+  avatarEl.innerHTML = "";
+  avatarEl.appendChild(img);
+} else {
+  avatarEl.textContent = name[0] || "?";
+}
 
       const band = riskBandFromScore(toNumber(latestRow.mss) ?? 0);
       document.getElementById("recommendedAction").textContent = getRecommendation(band);
