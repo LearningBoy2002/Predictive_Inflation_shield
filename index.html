@@ -1498,7 +1498,7 @@
             <span class="search-kbd">/</span>
           </div>
           <div class="topbar-right">
-            <span class="chip scope">Test period: 2012-2013</span>
+            <span class="chip scope">Test period: 2022-2023</span>
             <span id="lastUpdatedChip" class="chip update-chip">Data current as of --</span>
             <button id="shortcutBtn" class="topbar-icon-btn" type="button" aria-label="Show shortcuts">?</button>
           </div>
@@ -1509,7 +1509,7 @@
         <section id="overview-section" class="section reveal">
           <div class="hero-block">
             <h1>Inflation Shield - Margin Squeeze Predictor</h1>
-            <p class="hero-subtitle">Predicting EBITDA margin compression 2 quarters ahead · CMIE Prowess · 2012-2013 test set</p>
+            <p class="hero-subtitle">Predicting EBITDA margin compression 2 quarters ahead · CMIE Prowess · 2022-2023 test set</p>
           </div>
 
           <div class="kpi-grid">
@@ -1746,7 +1746,7 @@
         <section id="methodology-section" class="section reveal">
           <h2 class="section-title">Methodology</h2>
           <article class="card about-block">
-            <p><strong>Data:</strong> CMIE Prowess quarterly financials, 30 large NSE/BSE-listed Indian firms, 1995-2014. Test set = 2012-2013.</p>
+            <p><strong>Data:</strong> CMIE Prowess quarterly financials, 30 large NSE/BSE-listed Indian firms, 2005-2024. Test set = 2022-2023.</p>
             <p><strong>Target:</strong> Binary indicator of at least 150 bps EBITDA margin compression over next 2 quarters.</p>
             <p><strong>Model:</strong> Tuned LightGBM (Optuna, 50 trials), 23 features including CPR, ICSI, IBD, WCSS, OL, SIB plus lag and momentum features.</p>
             <p><strong>Limitations:</strong> 30-firm universe, ends 2014 (no post-pandemic), inventory/working-capital fields sparse (IBD and WCSS computable for less than 30% of rows), no macro features (WPI/Brent/INR-USD).</p>
